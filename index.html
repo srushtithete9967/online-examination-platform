@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Examination System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Online Examination System</h1>
+            <p>Computer Science Mock Test</p>
+        </header>
+
+
+        <!-- Start Screen -->
+        <section id="startScreen" class="screen">
+
+            <h2>Welcome to the Exam</h2>
+
+            <p>Total Questions: 5</p>
+            <p>Time Limit: 5 Minutes</p>
+            <p>Each question carries 1 mark.</p>
+
+            <button onclick="startExam()">Start Exam</button>
+
+        </section>
+
+
+        <!-- Exam Screen -->
+        <section id="examScreen" class="screen hidden">
+
+            <div class="exam-top">
+
+                <span id="questionNumber">
+                    Question 1 of 5
+                </span>
+
+                <span id="timer">
+                    05:00
+                </span>
+
+            </div>
+
+
+            <div class="question-box">
+
+                <h2 id="question">
+                    Question will appear here
+                </h2>
+
+                <div id="options"></div>
+
+            </div>
+
+
+            <button id="nextButton" onclick="nextQuestion()">
+                Next
+            </button>
+
+        </section>
+
+
+        <!-- Result Screen -->
+        <section id="resultScreen" class="screen hidden">
+
+            <h2>Exam Completed 🎉</h2>
+
+            <p>Your Score</p>
+
+            <div class="score" id="score">
+                0 / 5
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <button onclick="restartExam()">
+                Take Exam Again
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
